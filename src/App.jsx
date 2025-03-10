@@ -1,5 +1,5 @@
 // importera routerkomponenter för sidnavigering
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 // importera stilmall
 import "./styles/main.css";
@@ -13,7 +13,7 @@ import Job from "./pages/Job";
 
 function App() {
   return (
-    <Router>
+    <BrowserRouter basename="/delissimo-website-labb4">
       <Routes>
         {/* route till index-sidan */}
         <Route path="/" element={<Index />} />
@@ -30,7 +30,7 @@ function App() {
         {/* route till job-sidan */}
         <Route path="/job" element={<Job />} />
       </Routes>
-    </Router>
+    </BrowserRouter>
   );
 }
 
